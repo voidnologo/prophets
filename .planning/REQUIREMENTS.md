@@ -67,17 +67,17 @@ These are scoped for a later milestone.
 
 | Requirement | Phase |
 |---|---|
-| INFRA-01 | |
-| INFRA-02 | |
-| INFRA-03 | |
-| GRID-01 | |
-| GRID-02 | |
-| GRID-03 | |
-| FLASH-01 | |
-| FLASH-02 | |
-| FLASH-03 | |
-| BIO-01 | |
-| BIO-02 | |
-| BIO-03 | |
-| BIO-04 | |
-| ACCESS-01 | |
+| INFRA-01 | Phase 1: Foundation |
+| INFRA-02 | Phase 1: Foundation |
+| INFRA-03 | Phase 1: Foundation |
+| GRID-01 | Phase 2: Flip Card Grid |
+| GRID-02 | Phase 2: Flip Card Grid |
+| GRID-03 | Phase 2: Flip Card Grid |
+| FLASH-01 | Phase 3: Flash Cards |
+| FLASH-02 | Phase 3: Flash Cards |
+| FLASH-03 | Phase 3: Flash Cards |
+| BIO-01 | Phase 4: Biographies |
+| BIO-02 | Phase 4: Biographies |
+| BIO-03 | Phase 4: Biographies |
+| BIO-04 | Phase 4: Biographies |
+| ACCESS-01 | Phase 3: Flash Cards |
