@@ -35,13 +35,13 @@ Plans:
 
 ---
 
-### Phase 3: Flash Cards
+### Phase 3: Flash Cards — IN PROGRESS
 **Goal:** Add an interactive multiple-choice game mode where users are shown a photo and must identify the leader, with immediate accessible feedback and a spaced-repetition retry for missed cards.
 **Requirements:** FLASH-01, FLASH-02, FLASH-03, ACCESS-01
-**Plans:** 2 plans
+**Plans:** 1/2 plans complete
 
 Plans:
-- [ ] 03-01-PLAN.md — Flash card game page (state machine, distractor algorithm, elimination feedback, missed-card requeue) + Nav activation
+- [x] 03-01-PLAN.md — Flash card game page (state machine, distractor algorithm, elimination feedback, missed-card requeue) + Nav activation
 - [ ] 03-02-PLAN.md — Deployment and PM verification checkpoint (desktop + real iOS device)
 
 **Success Criteria:**

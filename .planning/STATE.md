@@ -2,29 +2,29 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: Not started
-status: completed
-stopped_at: Completed 02-02-PLAN.md
-last_updated: "2026-03-02T08:26:09.678Z"
+current_plan: "03-01 complete"
+status: in-progress
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-03-02T14:25:00Z"
 progress:
-  total_phases: 2
+  total_phases: 3
   completed_phases: 2
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 7
+  completed_plans: 7
 ---
 
 # Project State
 
 ## Current Position
 - **Milestone:** 1 — v1
-- **Phase:** 2 — Flip Card Grid (MVP) — COMPLETE
-- **Current Plan:** Not started
-- **Status:** Milestone complete
+- **Phase:** 3 — Flash Cards — IN PROGRESS
+- **Current Plan:** 03-01 complete, 03-02 pending (visual verification)
+- **Status:** Phase 3 plan 1 complete — awaiting visual verification checkpoint
 
 ## Last Session
-- **Stopped at:** Completed 02-02-PLAN.md
-- **Resume with:** `/gsd:execute-phase 3` in a fresh context window
-- **Resume file:** .planning/phases/02-flip-card-grid-mvp/02-02-SUMMARY.md
+- **Stopped at:** Completed 03-01-PLAN.md
+- **Resume with:** `/gsd:execute-phase 3` (plan 03-02) in a fresh context window
+- **Resume file:** .planning/phases/03-flash-cards/03-01-SUMMARY.md
 
 ## Key Decisions
 | Decision | Rationale | Decided |
@@ -53,6 +53,9 @@ progress:
 | Large back-face photo replaces thumbnail | Thumbnail-only back face too small on mobile; redesign uses large photo (~75% card height) + bold name for immediate identification on flip | Plan 02-02 |
 | Dev server host binding via vite.config.js | `server: { host: true }` binds to 0.0.0.0 so real iOS devices on LAN can connect without ngrok/tunnel | Plan 02-02 |
 | PM verifies on live GitHub Pages URL for iOS | Avoids localhost tunnel complexity; tests the actual production deployment path | Plan 02-02 |
+| flashcard-logic.ts extracts pure functions for testability | shuffle/buildChoices tested with vitest without browser; Svelte page imports from module | Plan 03-01 |
+| firstTryUsed flag prevents multiple requeues | Card appended to deck only on first wrong guess — re-appending on every wrong guess would inflate deck size indefinitely | Plan 03-01 |
+| Distractors drawn from allLeaders (full pool) not deck subset | Keeps choices challenging even in Replay Missed sessions with small deck | Plan 03-01 |
 
 ## Blockers
 (none)
@@ -71,6 +74,7 @@ progress:
 | 01-foundation | 03 | 15 min | 3 | 37 |
 | 02-flip-card-grid-mvp | 01 | 2 min | 2 | 2 |
 | 02-flip-card-grid-mvp | 02 | ~30 min | 2 | 2 |
+| 03-flash-cards | 01 | 2 min | 2 | 5 |
 
 ---
-*Last updated: 2026-03-02 — Phase 2 complete (PM-approved desktop + iOS)*
+*Last updated: 2026-03-02 — Phase 3 Plan 1 complete (flash card game built + nav activated)*

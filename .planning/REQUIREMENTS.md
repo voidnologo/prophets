@@ -16,9 +16,9 @@
 
 ### Flash Cards — Multiple Choice (FLASH)
 
-- [ ] **FLASH-01**: User is shown a photo of one leader and must select the correct name from 4 options, where all 4 options are plausible leaders (not obviously wrong distractors)
-- [ ] **FLASH-02**: User sees immediate feedback when they answer — the correct name is revealed, with color + icon + text (never color alone)
-- [ ] **FLASH-03**: When a user answers incorrectly, the card is reshuffled back into the remaining deck so they encounter it again before the session ends
+- [x] **FLASH-01**: User is shown a photo of one leader and must select the correct name from 4 options, where all 4 options are plausible leaders (not obviously wrong distractors)
+- [x] **FLASH-02**: User sees immediate feedback when they answer — the correct name is revealed, with color + icon + text (never color alone)
+- [x] **FLASH-03**: When a user answers incorrectly, the card is reshuffled back into the remaining deck so they encounter it again before the session ends
 
 ### Biographies (BIO)
 
@@ -29,7 +29,7 @@
 
 ### Accessibility (ACCESS)
 
-- [ ] **ACCESS-01**: All feedback (correct/incorrect, score) uses color + icon + text — never color alone — so colorblind users receive equivalent information
+- [x] **ACCESS-01**: All feedback (correct/incorrect, score) uses color + icon + text — never color alone — so colorblind users receive equivalent information
 
 ---
 
