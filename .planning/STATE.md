@@ -2,8 +2,13 @@
 
 ## Current Position
 - **Milestone:** 1 — v1
-- **Phase:** Not started
-- **Status:** Planning complete, ready to begin Phase 1
+- **Phase:** 1 — Foundation
+- **Status:** Phase 1 planned and verified — ready to execute
+
+## Last Session
+- **Stopped at:** Phase 1 fully planned (3 plans, 2 waves, verification passed)
+- **Resume with:** `/gsd:execute-phase 1` in a fresh context window
+- **Resume file:** `.planning/phases/01-foundation/01-01-PLAN.md`
 
 ## Key Decisions
 | Decision | Rationale | Decided |
