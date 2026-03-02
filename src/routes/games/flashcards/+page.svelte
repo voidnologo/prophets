@@ -97,26 +97,36 @@
 {/if}
 
 {#if view === 'playing' && currentCard}
-  <main class="max-w-lg mx-auto px-4 py-3 space-y-3">
+  <!--
+    Layout: flex column filling the viewport below the nav (nav is ~3.75rem tall).
+    Photo is flex-1 so it expands/shrinks to consume whatever space is left after
+    the fixed-size elements — no fixed pixel heights, scales to any device.
+    Feedback row is always present (invisible until answered) to prevent layout
+    shift that would resize the photo when Next button appears.
+  -->
+  <main
+    class="max-w-lg mx-auto px-4 flex flex-col"
+    style="height: calc(100dvh - 3.75rem);"
+  >
     <!-- Progress indicator -->
-    <p class="text-sm text-gray-500 text-center">
+    <p class="flex-shrink-0 pt-3 pb-1 text-sm text-gray-500 text-center">
       Card {currentIndex + 1} of {deck.length}
     </p>
 
-    <!-- Leader photo -->
-    <div class="h-40 w-32 mx-auto overflow-hidden rounded-xl shadow-lg">
+    <!-- Leader photo — fills all remaining vertical space -->
+    <div class="flex-1 min-h-0 flex items-center justify-center py-1">
       <img
         src="{base}/images/leaders/{currentCard.photo.filename}"
         alt="Who is this leader?"
-        class="w-full h-full object-cover object-top"
+        class="h-full w-auto max-w-full object-cover object-top rounded-xl shadow-lg"
       />
     </div>
 
     <!-- Question -->
-    <p class="text-base font-semibold text-gray-800 text-center">Who is this?</p>
+    <p class="flex-shrink-0 text-base font-semibold text-gray-800 text-center py-2">Who is this?</p>
 
     <!-- Answer choices -->
-    <div class="space-y-2">
+    <div class="flex-shrink-0 space-y-2">
       {#each choices as choice (choice.id)}
         {@const isEliminated = eliminated.has(choice.id)}
         {@const isCorrect = answered && choice.id === currentCard.id}
@@ -152,20 +162,21 @@
       {/each}
     </div>
 
-    <!-- Feedback text + Next button (only visible after correct answer) -->
-    {#if answered}
-      <div class="flex items-center justify-between gap-4">
-        <p class="text-green-700 font-semibold text-base">
-          {firstTryUsed ? "You found it!" : "Yes! That's right."}
-        </p>
-        <button
-          onclick={nextCard}
-          class="flex-shrink-0 px-6 py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
-        >
-          Next
-        </button>
-      </div>
-    {/if}
+    <!-- Feedback + Next — always occupies space (invisible until answered) to prevent layout shift -->
+    <div
+      class="flex-shrink-0 flex items-center justify-between gap-4 py-3
+             {answered ? 'visible' : 'invisible'}"
+    >
+      <p class="text-green-700 font-semibold text-base">
+        {firstTryUsed ? "You found it!" : "Yes! That's right."}
+      </p>
+      <button
+        onclick={nextCard}
+        class="flex-shrink-0 px-6 py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+      >
+        Next
+      </button>
+    </div>
   </main>
 {/if}
 
