@@ -5,6 +5,13 @@
 ### Phase 1: Foundation
 **Goal:** Establish verified data, a deployable SvelteKit scaffold, and a live GitHub Pages URL with a placeholder home page so every downstream phase builds on a proven pipeline.
 **Requirements:** INFRA-01, INFRA-02, INFRA-03
+**Plans:** 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Data layer: leaders.json (15 verified records), DATA-VERIFICATION.md for PM, GitHub issue template
+- [ ] 01-02-PLAN.md — Project scaffold: SvelteKit + adapter-static + Tailwind v4 + GitHub Actions deploy pipeline
+- [ ] 01-03-PLAN.md — Placeholder UI: Nav, layout with verified-date footer, home page leader list, photo optimization
+
 **Success Criteria:**
 1. A PM can open `leaders.json` and confirm all 15 leaders (3 First Presidency + 12 Apostles) are present with name, title, seniority order, and calling date, each traceable to a churchofjesuschrist.org source.
 2. Pushing a commit to `main` automatically triggers a GitHub Actions run that deploys to GitHub Pages — a PM can observe the green Actions check and load the live URL.
