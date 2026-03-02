@@ -53,10 +53,17 @@ Plans:
 ---
 
 ### Phase 4: Biographies
-**Goal:** Deliver a browsable biography directory with a dedicated page for each leader, including a PM-reviewed narrative, a quick-facts panel, and a sorted list of General Conference addresses.
+**Goal:** Deliver a browsable biography directory with a dedicated page per leader, showing a quick-facts panel and outbound links to the Church's authoritative biography and Conference talks pages.
 **Requirements:** BIO-01, BIO-02, BIO-03, BIO-04
+**Plans:** 3 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Biography directory page (/bios) + nav activation
+- [ ] 04-02-PLAN.md — Individual bio detail pages (/bios/[slug]) with quick-facts and outbound links
+- [ ] 04-03-PLAN.md — Build verification + PM sign-off (desktop + real iOS)
+
 **Success Criteria:**
 1. A user can navigate to the Biographies directory and see all 15 leaders listed with photos and names, each linking to a dedicated biography page.
-2. Each biography page contains a narrative of 300–600 words; a PM can read any bio and confirm it is written at an accessible reading level with no jargon and no unverified factual claims.
+2. Each biography page links to the official Church biography page (sourceUrl) which serves as the authoritative narrative destination — no custom-written narrative is needed.
 3. Each biography page displays a quick-facts panel showing the leader's age (calculated from birth date), calling date, spouse name, number of children, and pre-calling career summary.
-4. Each biography page lists all of the leader's General Conference addresses sorted newest to oldest, with working links to churchofjesuschrist.org.
+4. Each biography page includes a Conference Talks link to churchofjesuschrist.org, constructed from the leader's slug, opening in a new tab.
