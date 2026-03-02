@@ -5,7 +5,7 @@ milestone_name: milestone
 current_plan: Not started
 status: completed
 stopped_at: Completed 04-03-PLAN.md
-last_updated: "2026-03-02T15:59:35.305Z"
+last_updated: "2026-03-02T16:04:56.946Z"
 progress:
   total_phases: 4
   completed_phases: 3
@@ -15,16 +15,22 @@ progress:
 
 # Project State
 
+## Project Reference
+
+See: .planning/PROJECT.md (updated 2026-03-02)
+
+**Core value:** Learn the people who lead the Church
+**Current focus:** Planning next milestone (v1.1)
+
 ## Current Position
-- **Milestone:** 1 — v1
+- **Milestone:** v1.0 — ARCHIVED
 - **Phase:** 4 — Biographies — COMPLETE
-- **Current Plan:** Not started
-- **Status:** Milestone complete
+- **Current Plan:** N/A — v1.0 milestone complete
+- **Status:** Ready for v1.1 planning
 
 ## Last Session
-- **Stopped at:** Completed 04-03-PLAN.md
-- **Resume with:** N/A — v1 milestone complete
-- **Resume file:** .planning/phases/04-biographies/04-03-SUMMARY.md
+- **Stopped at:** complete-milestone v1.0
+- **Resume with:** /gsd:new-milestone
 
 ## Key Decisions
 | Decision | Rationale | Decided |
@@ -84,5 +90,5 @@ progress:
 | 04-biographies | 03 | ~1 min | 2 | 0 |
 
 ---
-*Last updated: 2026-03-02 — v1 milestone complete. Phase 4 Plan 3 complete — biography section PM-verified on desktop and real iOS.*
+*Last updated: 2026-03-02 after v1.0 milestone archived*
 
