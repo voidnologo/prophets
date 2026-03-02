@@ -5,7 +5,7 @@
 ### Infrastructure & Data (INFRA)
 
 - [x] **INFRA-01**: A `leaders.json` file exists with all 15 leaders (3 First Presidency + 12 Quorum of the Twelve), where every name, title, seniority integer, calling date, and supporting fact is verified against churchofjesuschrist.org before being committed
-- [ ] **INFRA-02**: The project is scaffolded as a SvelteKit app with `@sveltejs/adapter-static`, `paths.base` correctly configured for GitHub Pages, and a GitHub Actions workflow that deploys the `/build` output to GitHub Pages on every push to `main`
+- [x] **INFRA-02**: The project is scaffolded as a SvelteKit app with `@sveltejs/adapter-static`, `paths.base` correctly configured for GitHub Pages, and a GitHub Actions workflow that deploys the `/build` output to GitHub Pages on every push to `main`
 - [ ] **INFRA-03**: A visible "Leader data last verified: [date]" note appears in the app footer so users can judge data freshness
 
 ### Grid — Flip Cards (GRID)

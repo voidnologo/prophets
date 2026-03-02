@@ -9,7 +9,7 @@
 
 Plans:
 - [x] 01-01-PLAN.md — Data layer: leaders.json (15 verified records), DATA-VERIFICATION.md for PM, GitHub issue template
-- [ ] 01-02-PLAN.md — Project scaffold: SvelteKit + adapter-static + Tailwind v4 + GitHub Actions deploy pipeline
+- [x] 01-02-PLAN.md — Project scaffold: SvelteKit + adapter-static + Tailwind v4 + GitHub Actions deploy pipeline
 - [ ] 01-03-PLAN.md — Placeholder UI: Nav, layout with verified-date footer, home page leader list, photo optimization
 
 **Success Criteria:**
