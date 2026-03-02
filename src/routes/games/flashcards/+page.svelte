@@ -22,6 +22,9 @@
   let firstTryUsed = $state(false);
   let answered = $state(false);
 
+  // --- Session mode ---
+  let isReplay = $state(false);
+
   // --- Session scoring state ---
   let firstTryCorrect = $state(0);
   let missedCards = $state<Leader[]>([]);
@@ -31,6 +34,7 @@
 
   function startGame(subset?: Leader[]) {
     const source = subset ?? allLeaders;
+    isReplay = !!subset;
     deck = shuffle(source);
     currentIndex = 0;
     firstTryCorrect = 0;
@@ -54,12 +58,11 @@
       }
       answered = true;
     } else {
-      // Wrong guess
+      // Wrong guess — eliminate choice, track as missed on first wrong guess
       eliminated = new Set([...eliminated, choice.id]);
       if (!firstTryUsed) {
-        // FIRST wrong guess only — requeue card at end of deck (FLASH-03)
-        deck = [...deck, currentCard];
         firstTryUsed = true;
+        missedCards = [...missedCards, currentCard];
       }
     }
   }
@@ -82,7 +85,7 @@
   <div class="flex flex-col items-center justify-center min-h-[60vh] gap-8 px-4">
     <h1 class="text-4xl font-bold text-gray-900 text-center">Flash Cards</h1>
     <p class="text-lg text-gray-600 text-center max-w-sm">
-      Can you identify all 15 leaders from their photos?
+      Can you identify all 15 prophets from their photos?
     </p>
     <button
       onclick={() => startGame()}
@@ -94,14 +97,14 @@
 {/if}
 
 {#if view === 'playing' && currentCard}
-  <main class="max-w-lg mx-auto px-4 py-8 space-y-6">
+  <main class="max-w-lg mx-auto px-4 py-3 space-y-3">
     <!-- Progress indicator -->
     <p class="text-sm text-gray-500 text-center">
       Card {currentIndex + 1} of {deck.length}
     </p>
 
     <!-- Leader photo -->
-    <div class="aspect-[4/5] w-64 mx-auto overflow-hidden rounded-xl shadow-lg">
+    <div class="h-40 w-32 mx-auto overflow-hidden rounded-xl shadow-lg">
       <img
         src="{base}/images/leaders/{currentCard.photo.filename}"
         alt="Who is this leader?"
@@ -110,17 +113,17 @@
     </div>
 
     <!-- Question -->
-    <p class="text-lg font-semibold text-gray-800 text-center">Who is this?</p>
+    <p class="text-base font-semibold text-gray-800 text-center">Who is this?</p>
 
     <!-- Answer choices -->
-    <div class="space-y-3">
+    <div class="space-y-2">
       {#each choices as choice (choice.id)}
         {@const isEliminated = eliminated.has(choice.id)}
         {@const isCorrect = answered && choice.id === currentCard.id}
         <button
           onclick={() => handleGuess(choice)}
           disabled={isEliminated || answered}
-          class="w-full px-4 py-3 rounded-xl border-2 text-left font-medium transition-colors flex items-center gap-2
+          class="w-full px-4 py-2 rounded-xl border-2 text-left font-medium transition-colors flex items-center gap-2
             {isCorrect
               ? 'bg-green-600 text-white border-green-600'
               : isEliminated
@@ -151,13 +154,13 @@
 
     <!-- Feedback text + Next button (only visible after correct answer) -->
     {#if answered}
-      <div class="text-center space-y-4">
-        <p class="text-green-700 font-semibold text-lg">
+      <div class="flex items-center justify-between gap-4">
+        <p class="text-green-700 font-semibold text-base">
           {firstTryUsed ? "You found it!" : "Yes! That's right."}
         </p>
         <button
           onclick={nextCard}
-          class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+          class="flex-shrink-0 px-6 py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
         >
           Next
         </button>
@@ -169,9 +172,13 @@
 {#if view === 'summary'}
   <div class="flex flex-col items-center justify-center min-h-[60vh] gap-8 px-4 text-center">
     <h2 class="text-3xl font-bold text-gray-900">
-      {firstTryCorrect === allLeaders.length
-        ? 'Perfect score!'
-        : `${firstTryCorrect} out of ${allLeaders.length} on your first try!`}
+      {#if isReplay}
+        Replay complete!
+      {:else if missedCards.length === 0}
+        Perfect score!
+      {:else}
+        {firstTryCorrect} out of {allLeaders.length} on your first try!
+      {/if}
     </h2>
     <div class="flex flex-wrap gap-4 justify-center">
       <button
@@ -180,7 +187,7 @@
       >
         Play Again
       </button>
-      {#if missedCards.length > 0}
+      {#if !isReplay && missedCards.length > 0}
         <button
           onclick={() => startGame(missedCards)}
           class="px-6 py-3 bg-gray-100 text-gray-800 font-semibold rounded-xl hover:bg-gray-200 transition-colors border border-gray-300"
