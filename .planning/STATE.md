@@ -2,29 +2,29 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: Not started
-status: completed
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-02T03:29:42.540Z"
+current_plan: 02-01
+status: in-progress
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-02T04:00:00.000Z"
 progress:
-  total_phases: 2
+  total_phases: 4
   completed_phases: 1
   total_plans: 3
-  completed_plans: 3
+  completed_plans: 1
 ---
 
 # Project State
 
 ## Current Position
 - **Milestone:** 1 — v1
-- **Phase:** 1 — Foundation
-- **Current Plan:** Not started
-- **Status:** Milestone complete
+- **Phase:** 2 — Flip Card Grid (MVP)
+- **Current Plan:** 02-01 complete — flip card component and home page grid
+- **Status:** Phase 2 in progress
 
 ## Last Session
-- **Stopped at:** Phase 2 context gathered
-- **Resume with:** `/gsd:execute-phase 2` in a fresh context window
-- **Resume file:** .planning/phases/02-flip-card-grid-mvp/02-CONTEXT.md
+- **Stopped at:** Completed 02-01-PLAN.md
+- **Resume with:** `/gsd:execute-phase 2` in a fresh context window (plan 02-02 next)
+- **Resume file:** .planning/phases/02-flip-card-grid-mvp/02-01-SUMMARY.md
 
 ## Key Decisions
 | Decision | Rationale | Decided |
@@ -47,6 +47,9 @@ progress:
 | Inactive nav links use span not a | Disabled anchor tags still receive keyboard focus; span elements correctly exclude items from tab order | Plan 01-03 |
 | March 2026 lineup correction applied | Oaks as President, Eyring as First Counselor, Christofferson as Second Counselor, Caussé and Gilbert as new apostles — sourced from churchofjesuschrist.org | Plan 01-03 |
 | Image optimizer uses cover+top crop | Leader portraits are head-and-shoulders; top crop keeps face in frame when forcing 4:5 aspect ratio | Plan 01-03 |
+| Hover/tap duality via @media (hover: hover) | Desktop uses CSS-only hover, touch uses $state toggle — JS-driven .flipped suppressed on hover-capable devices to prevent desktop lock-open bug | Plan 02-01 |
+| Three-layer flip structure required | Scene > card > faces required for backface-visibility to work in Safari; two-layer approach breaks cross-browser | Plan 02-01 |
+| Keyed {#each} with leader.id | Prevents flip state bleeding when card positions reorder in future phases | Plan 02-01 |
 
 ## Blockers
 (none)
@@ -63,6 +66,7 @@ progress:
 | 01-foundation | 01 | 3 min | 2 | 3 |
 | 01-foundation | 02 | 3 min | 2 | 15 |
 | 01-foundation | 03 | 15 min | 3 | 37 |
+| 02-flip-card-grid-mvp | 01 | 2 min | 2 | 2 |
 
 ---
-*Last updated: 2026-03-01*
+*Last updated: 2026-03-02*
