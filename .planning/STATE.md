@@ -3,12 +3,13 @@
 ## Current Position
 - **Milestone:** 1 — v1
 - **Phase:** 1 — Foundation
-- **Status:** Phase 1 planned and verified — ready to execute
+- **Current Plan:** 2 of 3
+- **Status:** Executing Phase 1 — Plan 01-01 complete
 
 ## Last Session
-- **Stopped at:** Phase 1 fully planned (3 plans, 2 waves, verification passed)
+- **Stopped at:** Completed 01-01-PLAN.md (leader data layer)
 - **Resume with:** `/gsd:execute-phase 1` in a fresh context window
-- **Resume file:** `.planning/phases/01-foundation/01-01-PLAN.md`
+- **Resume file:** `.planning/phases/01-foundation/01-02-PLAN.md`
 
 ## Key Decisions
 | Decision | Rationale | Decided |
@@ -21,6 +22,10 @@
 | Tailwind CSS v4 + scoped styles for 3D flip | Tailwind handles layout; scoped CSS handles preserve-3d where arbitrary syntax would be unreadable | Phase 0 |
 | paths.base = '/prophets' set on day one | GitHub Pages serves at /prophets/; root-relative paths 404 in production | Phase 0 |
 | Biographies PM-reviewed before commit | Hallucinated facts about living religious leaders are not recoverable; sourcing discipline enforced at authoring time | Phase 0 |
+| quorum values as kebab-case strings | Consistent with slug conventions; safe for switch/filter logic in all phases | Plan 01-01 |
+| id === slug (both fields kept) | id for map lookups/keying, slug for route params; eliminates ambiguity downstream | Plan 01-01 |
+| photo.filename stores slug only (no path) | SvelteKit base path applied at render time; hardcoding breaks GitHub Pages deployment | Plan 01-01 |
+| conferenceTalks/triviaFacts initialized as [] not null | Downstream consumers can iterate safely without null checks | Plan 01-01 |
 
 ## Blockers
 (none)
@@ -29,6 +34,12 @@
 - All v2 features (seniority ordering game, typed name entry, trivia, extended accessibility, high score persistence) are explicitly deferred out of v1 scope.
 - Every internal link and asset path must use SvelteKit's `base` export from `$app/paths` — never a root-relative path.
 - Flash card and biography work must be tested on a real iOS device, not Chrome DevTools emulation.
+
+## Performance Metrics
+
+| Phase | Plan | Duration | Tasks | Files |
+|---|---|---|---|---|
+| 01-foundation | 01 | 3 min | 2 | 3 |
 
 ---
 *Last updated: 2026-03-01*
