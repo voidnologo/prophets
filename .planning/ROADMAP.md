@@ -38,6 +38,12 @@ Plans:
 ### Phase 3: Flash Cards
 **Goal:** Add an interactive multiple-choice game mode where users are shown a photo and must identify the leader, with immediate accessible feedback and a spaced-repetition retry for missed cards.
 **Requirements:** FLASH-01, FLASH-02, FLASH-03, ACCESS-01
+**Plans:** 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Flash card game page (state machine, distractor algorithm, elimination feedback, missed-card requeue) + Nav activation
+- [ ] 03-02-PLAN.md — Deployment and PM verification checkpoint (desktop + real iOS device)
+
 **Success Criteria:**
 1. A user can start a Flash Cards session and be shown a leader photo with exactly 4 name options, all of which are real leaders from the dataset (no obviously wrong distractors).
 2. After selecting an answer, the correct name is revealed with a distinct color, icon, and text label — a colorblind user receives the same information as a sighted user with normal color vision.
