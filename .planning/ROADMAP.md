@@ -58,7 +58,7 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Biography directory page (/bios) + nav activation
+- [x] 04-01-PLAN.md — Biography directory page (/bios) + nav activation
 - [ ] 04-02-PLAN.md — Individual bio detail pages (/bios/[slug]) with quick-facts and outbound links
 - [ ] 04-03-PLAN.md — Build verification + PM sign-off (desktop + real iOS)
 

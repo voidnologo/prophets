@@ -2,29 +2,29 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: "03-01 complete"
+current_plan: "04-01 complete"
 status: in-progress
-stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-03-02T14:25:00Z"
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-03-02T15:25:00Z"
 progress:
-  total_phases: 3
+  total_phases: 4
   completed_phases: 2
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 10
+  completed_plans: 8
 ---
 
 # Project State
 
 ## Current Position
 - **Milestone:** 1 — v1
-- **Phase:** 3 — Flash Cards — IN PROGRESS
-- **Current Plan:** 03-01 complete, 03-02 pending (visual verification)
-- **Status:** Phase 3 plan 1 complete — awaiting visual verification checkpoint
+- **Phase:** 4 — Biographies — IN PROGRESS
+- **Current Plan:** 04-01 complete, 04-02 pending (bio detail pages)
+- **Status:** Phase 4 plan 1 complete — /bios directory page built and nav activated
 
 ## Last Session
-- **Stopped at:** Completed 03-01-PLAN.md
-- **Resume with:** `/gsd:execute-phase 3` (plan 03-02) in a fresh context window
-- **Resume file:** .planning/phases/03-flash-cards/03-01-SUMMARY.md
+- **Stopped at:** Completed 04-01-PLAN.md
+- **Resume with:** `/gsd:execute-phase 4` (plan 04-02) in a fresh context window
+- **Resume file:** .planning/phases/04-biographies/04-01-SUMMARY.md
 
 ## Key Decisions
 | Decision | Rationale | Decided |
@@ -56,6 +56,8 @@ progress:
 | flashcard-logic.ts extracts pure functions for testability | shuffle/buildChoices tested with vitest without browser; Svelte page imports from module | Plan 03-01 |
 | firstTryUsed flag prevents multiple requeues | Card appended to deck only on first wrong guess — re-appending on every wrong guess would inflate deck size indefinitely | Plan 03-01 |
 | Distractors drawn from allLeaders (full pool) not deck subset | Keeps choices challenging even in Replay Missed sessions with small deck | Plan 03-01 |
+| /bios/[slug] 404s whitelisted in handleHttpError | Detail pages built in Plan 04-02; build must not fail on forward references from directory page links | Plan 04-01 |
+| No +page.js for /bios route | Layout-level prerender=true in +layout.js already covers all child static routes; separate +page.js is redundant | Plan 04-01 |
 
 ## Blockers
 (none)
@@ -75,6 +77,7 @@ progress:
 | 02-flip-card-grid-mvp | 01 | 2 min | 2 | 2 |
 | 02-flip-card-grid-mvp | 02 | ~30 min | 2 | 2 |
 | 03-flash-cards | 01 | 2 min | 2 | 5 |
+| 04-biographies | 01 | 5 min | 2 | 3 |
 
 ---
-*Last updated: 2026-03-02 — Phase 3 Plan 1 complete (flash card game built + nav activated)*
+*Last updated: 2026-03-02 — Phase 4 Plan 1 complete (/bios directory page built + nav activated)*
