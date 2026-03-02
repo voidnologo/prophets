@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     sveltekit()
-  ]
+  ],
+  server: {
+    host: true // bind to 0.0.0.0 so LAN devices (iOS) can reach the dev server
+  }
 });
