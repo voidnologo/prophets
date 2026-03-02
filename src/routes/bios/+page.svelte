@@ -12,6 +12,10 @@
   const quorumOfTwelve = leaders.leaders
     .filter(l => l.quorum === 'quorum-of-twelve')
     .sort((a, b) => a.seniority - b.seniority);
+
+  function stripRole(summary) {
+    return summary.replace(/\s+(who\s+(serv(es|ed)|was\s+called|became)|serving\s+as)\b.+$/i, '');
+  }
 </script>
 
 <svelte:head>
@@ -36,7 +40,7 @@
           <div class="p-3">
             <p class="font-bold text-gray-900 text-sm leading-tight">{leader.name.display}</p>
             <p class="text-xs text-gray-500 mt-0.5">{leader.title}</p>
-            <p class="text-xs text-gray-600 mt-1 line-clamp-2">{leader.bio.summary}</p>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">{stripRole(leader.bio.summary)}</p>
           </div>
         </a>
       {/each}
@@ -60,7 +64,7 @@
           <div class="p-3">
             <p class="font-bold text-gray-900 text-sm leading-tight">{leader.name.display}</p>
             <p class="text-xs text-gray-500 mt-0.5">{leader.title}</p>
-            <p class="text-xs text-gray-600 mt-1 line-clamp-2">{leader.bio.summary}</p>
+            <p class="text-xs text-gray-600 mt-1 line-clamp-2">{stripRole(leader.bio.summary)}</p>
           </div>
         </a>
       {/each}
