@@ -5,6 +5,11 @@
   import leaders from '$lib/data/leaders.json';
   import LeaderCard from '$lib/components/LeaderCard.svelte';
 
+  const lastVerified = new Date(leaders.lastVerified).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long'
+  });
+
   const firstPresidency = leaders.leaders
     .filter(l => l.quorum === 'first-presidency')
     .sort((a, b) => a.seniority - b.seniority);
@@ -37,3 +42,9 @@
     </div>
   </section>
 </main>
+
+<footer class="border-t border-gray-100 py-6 text-center text-sm text-gray-400">
+  Leader data last verified: {lastVerified}
+  &nbsp;&middot;&nbsp;
+  Photos courtesy of The Church of Jesus Christ of Latter-day Saints
+</footer>
