@@ -1,0 +1,43 @@
+name: Leadership Change
+description: Update app data when First Presidency or Q12 membership changes
+title: "[DATA] Leadership change: "
+labels: ["data-update"]
+body:
+  - type: markdown
+    value: |
+      Use this template whenever a change occurs in the First Presidency or Quorum of the Twelve.
+
+  - type: input
+    id: change-description
+    attributes:
+      label: What changed?
+      placeholder: "e.g. Elder Kearon released, Elder [Name] called as new Apostle"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: files-to-update
+    attributes:
+      label: Files to update
+      options:
+        - label: "`src/lib/data/leaders.json` — update/add/remove leader record, fix seniority integers for all affected leaders"
+        - label: "`static/images/leaders/` — add/remove photo file(s)"
+        - label: "`.planning/phases/01-foundation/DATA-VERIFICATION.md` — update verification table"
+        - label: "`src/lib/data/bios/<slug>.md` — add bio for new leader (Phase 4)"
+        - label: "Footer `lastVerified` date in `leaders.json`"
+
+  - type: textarea
+    id: source-urls
+    attributes:
+      label: Source URLs (churchofjesuschrist.org)
+      placeholder: "List the official profile URLs for all changed leaders"
+    validations:
+      required: true
+
+  - type: input
+    id: effective-date
+    attributes:
+      label: Effective date of change
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
