@@ -31,22 +31,25 @@
         loading="lazy"
       />
     </div>
-    <!-- Back face: thumbnail + name + title. Pre-rotated 180° so it starts facing away. -->
+    <!-- Back face: large photo (top ~68%) + name + title (bottom ~32%). Pre-rotated 180°. -->
     <div class="face-back absolute inset-0 backface-hidden rotate-y-180
-                overflow-hidden rounded-lg bg-white flex flex-col
-                items-center justify-center gap-3 p-4">
-      <img
-        src="{base}/images/leaders/{leader.photo.filename}"
-        alt=""
-        aria-hidden="true"
-        class="w-16 h-20 object-cover object-top rounded"
-      />
-      <p class="text-center font-semibold text-gray-900 text-sm leading-tight">
-        {leader.name.display}
-      </p>
-      <p class="text-center text-xs text-gray-500 leading-tight">
-        {leader.title}
-      </p>
+                overflow-hidden rounded-lg bg-white flex flex-col">
+      <div class="flex-[68] overflow-hidden">
+        <img
+          src="{base}/images/leaders/{leader.photo.filename}"
+          alt=""
+          aria-hidden="true"
+          class="w-full h-full object-cover object-top"
+        />
+      </div>
+      <div class="flex-[32] flex flex-col items-center justify-center px-2 py-1 gap-0.5">
+        <p class="text-center font-bold text-gray-900 text-base leading-tight">
+          {leader.name.display}
+        </p>
+        <p class="text-center text-xs text-gray-500 leading-snug">
+          {leader.title}
+        </p>
+      </div>
     </div>
   </div>
 </div>
