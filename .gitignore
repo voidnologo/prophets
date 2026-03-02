@@ -21,3 +21,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Raw (unoptimized) leader photos — run scripts/optimize-images.js to regenerate static/images/leaders/
+scripts/raw-photos/
