@@ -33,6 +33,7 @@
   let currentCard = $derived(deck[currentIndex]);
 
   function startGame(subset?: Leader[]) {
+    window.scrollTo(0, 0);
     const source = subset ?? allLeaders;
     isReplay = !!subset;
     deck = shuffle(source);
@@ -53,9 +54,8 @@
       // Correct answer found
       if (!firstTryUsed) {
         firstTryCorrect++;
-      } else {
-        missedCards = [...missedCards, currentCard];
       }
+      // missedCards already tracked on first wrong guess — do not add again here
       answered = true;
     } else {
       // Wrong guess — eliminate choice, track as missed on first wrong guess
