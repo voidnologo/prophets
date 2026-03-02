@@ -4,7 +4,7 @@
 
   const links = [
     { href: `${base}/`, label: 'Leaders', active: true },
-    { href: `${base}/games/flashcards`, label: 'Flash Cards', active: false },
+    { href: `${base}/games/flashcards`, label: 'Flash Cards', active: true },
     { href: `${base}/bios`, label: 'Biographies', active: false },
   ];
 </script>
