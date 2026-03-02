@@ -11,8 +11,8 @@
 ### Grid — Flip Cards (GRID)
 
 - [x] **GRID-01**: User can see a responsive grid of all 15 leaders (First Presidency and Quorum of the Twelve displayed on the home page)
-- [ ] **GRID-02**: User can hover over a card (desktop) and it flips with a CSS 3D rotation revealing the leader's name and title
-- [ ] **GRID-03**: User can tap a card (mobile/touch) and it flips to reveal the leader's name and title; tapping again unflips it
+- [x] **GRID-02**: User can hover over a card (desktop) and it flips with a CSS 3D rotation revealing the leader's name and title
+- [x] **GRID-03**: User can tap a card (mobile/touch) and it flips to reveal the leader's name and title; tapping again unflips it
 
 ### Flash Cards — Multiple Choice (FLASH)
 

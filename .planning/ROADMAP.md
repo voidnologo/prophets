@@ -19,14 +19,14 @@ Plans:
 
 ---
 
-### Phase 2: Flip Card Grid (MVP)
+### Phase 2: Flip Card Grid (MVP) — COMPLETE
 **Goal:** Ship the core learning experience — a responsive grid of all 15 leaders where each card flips on hover or tap to reveal the leader's name and title.
 **Requirements:** GRID-01, GRID-02, GRID-03
-**Plans:** 1/2 plans complete
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 02-01-PLAN.md — LeaderCard component (CSS 3D flip) + home page grid rewrite
-- [ ] 02-02-PLAN.md — Visual and touch verification checkpoint (PM sign-off)
+- [x] 02-02-PLAN.md — Visual and touch verification checkpoint (PM sign-off)
 
 **Success Criteria:**
 1. A user visiting the home page on a desktop browser sees all 15 leader photos arranged in a responsive grid with no broken images or layout overflow.

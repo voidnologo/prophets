@@ -2,29 +2,29 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: 02-01
-status: in-progress
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-02T04:00:00.000Z"
+current_plan: 02-02
+status: phase-complete
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-03-02T12:00:00.000Z"
 progress:
   total_phases: 4
-  completed_phases: 1
-  total_plans: 3
-  completed_plans: 1
+  completed_phases: 2
+  total_plans: 5
+  completed_plans: 3
 ---
 
 # Project State
 
 ## Current Position
 - **Milestone:** 1 — v1
-- **Phase:** 2 — Flip Card Grid (MVP)
-- **Current Plan:** 02-01 complete — flip card component and home page grid
-- **Status:** Phase 2 in progress
+- **Phase:** 2 — Flip Card Grid (MVP) — COMPLETE
+- **Current Plan:** 02-02 complete — PM visual verification passed on desktop and iOS
+- **Status:** Phase 2 complete, ready for Phase 3 (Flash Cards)
 
 ## Last Session
-- **Stopped at:** Completed 02-01-PLAN.md
-- **Resume with:** `/gsd:execute-phase 2` in a fresh context window (plan 02-02 next)
-- **Resume file:** .planning/phases/02-flip-card-grid-mvp/02-01-SUMMARY.md
+- **Stopped at:** Completed 02-02-PLAN.md
+- **Resume with:** `/gsd:execute-phase 3` in a fresh context window
+- **Resume file:** .planning/phases/02-flip-card-grid-mvp/02-02-SUMMARY.md
 
 ## Key Decisions
 | Decision | Rationale | Decided |
@@ -50,6 +50,9 @@ progress:
 | Hover/tap duality via @media (hover: hover) | Desktop uses CSS-only hover, touch uses $state toggle — JS-driven .flipped suppressed on hover-capable devices to prevent desktop lock-open bug | Plan 02-01 |
 | Three-layer flip structure required | Scene > card > faces required for backface-visibility to work in Safari; two-layer approach breaks cross-browser | Plan 02-01 |
 | Keyed {#each} with leader.id | Prevents flip state bleeding when card positions reorder in future phases | Plan 02-01 |
+| Large back-face photo replaces thumbnail | Thumbnail-only back face too small on mobile; redesign uses large photo (~75% card height) + bold name for immediate identification on flip | Plan 02-02 |
+| Dev server host binding via vite.config.js | `server: { host: true }` binds to 0.0.0.0 so real iOS devices on LAN can connect without ngrok/tunnel | Plan 02-02 |
+| PM verifies on live GitHub Pages URL for iOS | Avoids localhost tunnel complexity; tests the actual production deployment path | Plan 02-02 |
 
 ## Blockers
 (none)
@@ -67,6 +70,7 @@ progress:
 | 01-foundation | 02 | 3 min | 2 | 15 |
 | 01-foundation | 03 | 15 min | 3 | 37 |
 | 02-flip-card-grid-mvp | 01 | 2 min | 2 | 2 |
+| 02-flip-card-grid-mvp | 02 | ~30 min | 2 | 2 |
 
 ---
-*Last updated: 2026-03-02*
+*Last updated: 2026-03-02 — Phase 2 complete (PM-approved desktop + iOS)*
