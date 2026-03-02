@@ -3,13 +3,13 @@
 ## Current Position
 - **Milestone:** 1 — v1
 - **Phase:** 1 — Foundation
-- **Current Plan:** 3 of 3
-- **Status:** Executing Phase 1 — Plans 01-01 and 01-02 complete
+- **Current Plan:** 3 of 3 (COMPLETE)
+- **Status:** Phase 1 complete — ready for Phase 2
 
 ## Last Session
-- **Stopped at:** Completed 01-02-PLAN.md (SvelteKit scaffold + deploy pipeline)
-- **Resume with:** `/gsd:execute-phase 1` in a fresh context window
-- **Resume file:** `.planning/phases/01-foundation/01-03-PLAN.md`
+- **Stopped at:** Completed 01-03-PLAN.md (Placeholder UI + image optimization)
+- **Resume with:** `/gsd:execute-phase 2` in a fresh context window
+- **Resume file:** `.planning/phases/02-flip-card-grid/` (Phase 2 plans)
 
 ## Key Decisions
 | Decision | Rationale | Decided |
@@ -29,6 +29,9 @@
 | prerender=true in +layout.js | adapter-static skips index.html without explicit prerender; must be set at layout level to cover all routes | Plan 01-02 |
 | handleHttpError in svelte.config.js | Prerender server can't serve /prophets/ static assets; whitelist image/icon 404s to prevent build failure | Plan 01-02 |
 | Use sv CLI (not npm create svelte) | create-svelte is deprecated as of 2025; sv provides non-interactive flags for automation | Plan 01-02 |
+| Inactive nav links use span not a | Disabled anchor tags still receive keyboard focus; span elements correctly exclude items from tab order | Plan 01-03 |
+| March 2026 lineup correction applied | Oaks as President, Eyring as First Counselor, Christofferson as Second Counselor, Caussé and Gilbert as new apostles — sourced from churchofjesuschrist.org | Plan 01-03 |
+| Image optimizer uses cover+top crop | Leader portraits are head-and-shoulders; top crop keeps face in frame when forcing 4:5 aspect ratio | Plan 01-03 |
 
 ## Blockers
 (none)
@@ -44,6 +47,7 @@
 |---|---|---|---|---|
 | 01-foundation | 01 | 3 min | 2 | 3 |
 | 01-foundation | 02 | 3 min | 2 | 15 |
+| 01-foundation | 03 | 15 min | 3 | 37 |
 
 ---
-*Last updated: 2026-03-02*
+*Last updated: 2026-03-01*
