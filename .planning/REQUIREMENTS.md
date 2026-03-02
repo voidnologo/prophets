@@ -22,10 +22,10 @@
 
 ### Biographies (BIO)
 
-- [ ] **BIO-01**: User can browse a directory page listing all 15 leaders with photos and names, each linking to an individual biography page
-- [ ] **BIO-02**: Each of the 15 leaders has a dedicated biography page with a narrative (300–600 words, written at a 6th–8th grade reading level, PM-reviewed, all facts sourced from churchofjesuschrist.org)
-- [ ] **BIO-03**: Each biography page includes a quick-facts panel showing: age (calculated from birth date), calling date, spouse name, number of children, and pre-calling career summary
-- [ ] **BIO-04**: Each biography page includes a section listing all of the leader's General Conference addresses, sorted newest to oldest, with direct links to churchofjesuschrist.org
+- [x] **BIO-01**: User can browse a directory page listing all 15 leaders with photos and names, each linking to an individual biography page
+- [x] **BIO-02**: Each of the 15 leaders has a dedicated biography page with a narrative (300–600 words, written at a 6th–8th grade reading level, PM-reviewed, all facts sourced from churchofjesuschrist.org)
+- [x] **BIO-03**: Each biography page includes a quick-facts panel showing: age (calculated from birth date), calling date, spouse name, number of children, and pre-calling career summary
+- [x] **BIO-04**: Each biography page includes a section listing all of the leader's General Conference addresses, sorted newest to oldest, with direct links to churchofjesuschrist.org
 
 ### Accessibility (ACCESS)
 

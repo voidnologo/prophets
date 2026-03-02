@@ -55,11 +55,11 @@ Plans:
 ### Phase 4: Biographies
 **Goal:** Deliver a browsable biography directory with a dedicated page per leader, showing a quick-facts panel and outbound links to the Church's authoritative biography and Conference talks pages.
 **Requirements:** BIO-01, BIO-02, BIO-03, BIO-04
-**Plans:** 3 plans
+**Plans:** 2/3 plans complete
 
 Plans:
 - [x] 04-01-PLAN.md — Biography directory page (/bios) + nav activation
-- [ ] 04-02-PLAN.md — Individual bio detail pages (/bios/[slug]) with quick-facts and outbound links
+- [x] 04-02-PLAN.md — Individual bio detail pages (/bios/[slug]) with quick-facts and outbound links
 - [ ] 04-03-PLAN.md — Build verification + PM sign-off (desktop + real iOS)
 
 **Success Criteria:**
