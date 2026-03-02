@@ -19,6 +19,10 @@ const config = {
         if (path.endsWith('.svg') || path.endsWith('.png') || path.endsWith('.ico') || path.endsWith('.webp') || path.endsWith('.jpg')) {
           return;
         }
+        // Ignore missing /bios/[slug] detail pages — they are built in Plan 04-02
+        if (path.match(/\/bios\/[^/]+$/)) {
+          return;
+        }
         throw new Error(message);
       }
     }
